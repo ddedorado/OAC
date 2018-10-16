@@ -1,0 +1,48 @@
+custom-header {
+
+  .toolbar-background-md {
+    background: -moz-linear-gradient(top, rgba(178,178,178,1) 0%, #333 48%, #222 100%) !important;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(178,178,178,1)), color-stop(48%,  #333), color-stop(100%,  #222)) !important;
+    background: -webkit-linear-gradient(top, rgba(178,178,178,1) 0%,  #333 48%,  #222 100%) !important;
+    background: -o-linear-gradient(top, rgba(178,178,178,1) 0%,  #333 48%,  #222 100%) !important;
+    background: -ms-linear-gradient(top, rgba(178,178,178,1) 0%,  #333 48%,  #222 100%) !important;
+    background: linear-gradient(to bottom, rgba(178,178,178,1) 0%,  #333 48%,  #222 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2b2b2', endColorstr='#222', GradientType=0 ) !important;
+  }
+
+  #connect-to-robot .button-inner,
+  #manual-guiding .button-inner {
+    width: 99%;
+    text-align: left;
+  }
+
+  .title-md {
+    button {
+      font-size: 2.4rem;
+      font-weight: normal;
+    }
+  }
+
+  .bar-button-md {
+    height: 10vh;
+    font-size: 2.4rem;
+    font-weight: normal;
+
+    &[padding-right] {
+      padding-right: 2vw;
+    }
+
+    .button-inner {
+      white-space: normal;
+    }
+  }
+
+  ion-icon {
+    margin-top: -2px;
+    font-size: 8rem;
+  }
+  
+  .selected ion-icon {
+    color: color($colors, blue);
+  }
+}

@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../assets/fonts/icomoon.eot?7vu5i5');
+  src:  url('../assets/fonts/icomoon.eot?7vu5i5') format('embedded-opentype'),
+    url('../assets/fonts/icomoon.ttf?7vu5i5') format('truetype'),
+    url('../assets/fonts/icomoon.woff?7vu5i5') format('woff'),
+    url('../assets/fonts/icomoon.svg?7vu5i5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"],
+[class^="ion-ios-icon"],
+[class*="ion-ios-icon"],
+[class^="ion-md-icon"],
+[class*="ion-md-icon"]{
+  @extend .ion;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+ @mixin makeIcon($arg, $val) {
+  .ion-ios-#{$arg}:before ,
+  .ion-ios-#{$arg}-circle:before ,
+  .ion-ios-#{$arg}-circle-outline:before ,
+  .ion-ios-#{$arg}-outline:before ,
+  .ion-md-#{$arg}:before ,
+  .ion-md-#{$arg}-circle:before ,
+  .ion-md-#{$arg}-circle-outline:before ,
+  .ion-md-#{$arg}-outline:before  {
+    content: $val;
+  }
+}
+
+@include makeIcon(abb-comments, '\e90a');
+@include makeIcon(abb-pause, '\e90f');
+@include makeIcon(abb-clock, '\e902');
+@include makeIcon(abb-connect, '\e910');
+@include makeIcon(abb-load, '\e911');
+@include makeIcon(abb-manualguiding, '\e912');
+@include makeIcon(abb-modifyskill, '\e917');
+@include makeIcon(abb-home, '\e918');
+@include makeIcon(abb-cycles, '\e919');
+@include makeIcon(abb-yumi, '\e901');
+@include makeIcon(abb-duaro, '\e90c');
+@include makeIcon(abb-duarov2, '\e900');
+@include makeIcon(abb-back, '\e921');
+@include makeIcon(abb-save, '\e903');
+@include makeIcon(abb-saveas, '\e904');
+@include makeIcon(abb-undo, '\e905');
+@include makeIcon(abb-left, '\e906');
+@include makeIcon(abb-right, '\e90b');
+@include makeIcon(abb-plus, '\e908');
+@include makeIcon(abb-reset, '\e909');
+@include makeIcon(abb-load-gm, '\e907');
+@include makeIcon(abb-addposition, '\e916');
+@include makeIcon(abb-position, '\e915');
+@include makeIcon(abb-opengripper, '\e913');
+@include makeIcon(abb-closegripper, '\e914');

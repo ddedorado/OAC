@@ -1,0 +1,60 @@
+<!-- Header -->
+<div class="mg-container">
+  <div text-center class="mg-container__title">
+    <span>{{ this._positions[this._type].title }}</span>
+  </div>
+
+  <!-- Actions Buttons -->
+  <ion-row class="actions-container">
+    <button ion-button color="green" (click)="addAction('position', this._indexActions)" [disabled]="this._indexActions >= this._limitActions || !this._initPosition || this._executionActive" >
+      <ion-icon name="abb-addposition" margin-right></ion-icon>
+      <span>Add New Position</span>
+    </button>      
+    <button ion-button margin-bottom color="green" (click)="addAction('open', this._indexActions)" [disabled]="_indexActions >= this._limitActions || !this._initPosition || this._executionActive">
+      <ion-icon name="abb-opengripper" margin-right></ion-icon>
+      <span>Open Gripper</span>
+    </button>
+    <button ion-button color="green" (click)="addAction('close', this._indexActions)" [disabled]="_indexActions >= this._limitActions || !this._initPosition || this._executionActive">
+      <ion-icon name="abb-closegripper" margin-right></ion-icon>
+      <span>Close Gripper</span>
+    </button>
+  </ion-row>
+
+  <!-- Start Button -->
+  <div margin-vertical text-center class="set-container">
+    <button ion-button [color]="_startColor" (click)="setStartPosition()" [disabled]="this._executionActive">
+      <ion-icon name="abb-position" margin-right></ion-icon>
+      <span>Set Start Position</span>
+    </button>
+  </div>
+
+  <!-- Actions -->
+  <div class="positions-container">
+    <button *ngFor="let action of this._actions; let ind = index" ion-button no-margin margin-bottom no-padding [disabled]="this._executionActive" [color]="action.state" (click)="selectAction(ind)">
+      <ion-icon [name]="action.icon"></ion-icon>
+      <span [hidden]="action.type != 'position'" margin-left>{{action.position}}</span>
+    </button>
+  </div>
+
+  <!-- Bottoms Buttons -->
+  <div margin-vertical text-center class="set-container">
+    <!-- <button ion-button [color]="_endColor" (click)="setEndPosition()" [disabled]="this._executionActive || this._endPosition"> -->
+    <button ion-button [color]="_endColor" (click)="setEndPosition()" [disabled]="this._executionActive">  
+      <ion-icon name="abb-position" margin-right></ion-icon>
+      <span>Set End Position</span>
+    </button>
+  </div>
+
+  <div margin-vertical>
+    <ion-row>
+      <ion-col offset-3 col-6 no-padding text-center>
+        <button class="mg-green" ion-button color="green" [disabled]="!this._endPosition || (this._executionActive && this._type == this._oppositeArm)" margin-bottom icon-only (click)="playOnceWithOneArm()">
+          <ion-icon name="play"></ion-icon>
+        </button>
+        <button class="mg-green" ion-button color="green" [disabled]="!this._endPosition || (this._executionActive && this._type == this._oppositeArm)" margin-bottom icon-only (click)="pauseWithArm()">
+          <ion-icon name="pause"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+// Customs Icons
+@import '../theme/icons.scss';
+
+/**
+ * COLORS
+ */
+$red: #ff0000;
+$white: #fff;
+$black: #000;
+
+.toast-wrapper {
+  text-align: center;
+}
+
+.toast-md.info {
+  .toast-wrapper {
+    background-color: color($colors, blue)
+  }
+}
+
+.toast-md.error {
+  .toast-wrapper {
+    background-color: color($colors, red)
+  }
+}
+
+ion-alert {
+  top: 10.3vh !important;
+}
+
+.alert-message {
+  overflow-y: hidden;
+}
+
+.alert-md .alert-input {
+  font-size: 3.8rem;
+}
+
+.mn-popup {
+  text-align: center;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: $alert-md-sub-title-font-size;
+  }
+}
+
+.general-popup {
+  .alert-wrapper {
+    padding: 5rem 0;
+
+    .alert-message {
+      text-align: center;
+    }
+
+    .alert-button-group {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .close-btn {
+      .button-inner {
+        font-family:"Ionicons";
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        &:before {
+          content: "\f2c0";
+          font-size: 2em;
+          color: color($colors, black);
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,124 @@
+page-manual-guiding {
+
+  .mg-main-container {
+    margin-top: 5rem;
+
+    .segment-md .segment-button ion-icon {
+      font-size: 6rem;
+      line-height: 7rem;
+    }
+  }
+
+  .mg-column {
+    justify-items: flex-end;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+
+    .separator {
+      border: 2px solid color($colors, dark);
+      width: 1px;
+      height: calc(100% - 10em);
+      text-align: center;
+      justify-self: flex-start;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    .both-btn {
+      display: inline-block;
+      position: relative;
+
+      .both-text {
+        text-transform: uppercase;
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        top: -50px;
+        right: -50px;
+      }
+
+      ion-icon[name="abb-left"] {
+        font-size: 10rem;
+        position: absolute;
+        left: -115px;
+        bottom: 50px;
+      }
+
+      ion-icon[name="abb-right"] {
+        font-size: 10rem;
+        position: absolute;
+        right: -115px;
+        bottom: 50px;
+      }
+    }
+
+    span {
+      width: 100%;
+      text-align: center;
+      white-space: normal;
+    }
+
+    button {
+      border-radius: $border-rd;
+
+      &.mg-green {
+        height: 5em;
+        width: 100%;
+        margin-top: 5px;
+        padding: 0 45px;
+
+        .button-inner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  ion-segment {
+    background-color: color($colors, dark);
+
+    .segment-button {
+      color: color($colors, light) !important;
+      opacity: 1 !important;
+      font-size: 3.8rem !important;
+      padding: 20px 0 !important;
+      margin: 5px !important;
+      height: inherit !important;
+
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+
+      &:last-child {
+        justify-content: flex-end;
+      }
+
+      &.segment-activated {
+        background-color: color($colors, orange);
+        color: color($colors, dark) !important;
+      }
+
+      &[value="separated"] {
+        ion-icon[name="abb-left"] {
+          border-right: 1px solid;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+.item-md {
+  background-color: #e6e6e6;
+}
+
+.item-md.item-block .item-inner,
+.input-wrapper,
+ion-label {
+  border-bottom: 0px !important;
+  background-color: #e6e6e6;
+}

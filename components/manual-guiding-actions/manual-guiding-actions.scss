@@ -1,0 +1,104 @@
+manual-guiding-actions {
+  .mg-container {
+    margin-top: 3.5rem;
+
+    &__title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;  
+      margin-bottom: 3.5rem;
+
+      span {
+        font-size: 1.5em;
+      }
+      
+      ion-icon {
+        font-size: 2.3em;
+      }
+    }
+
+    &__btn-container {
+      display:flex;
+      flex-direction: column;
+    }
+
+    button {
+      border-radius: $border-rd;
+
+      &.mg-green {
+        height: 5em;
+        width: 49%;
+
+
+        .button-inner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .actions-container {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    
+    button {
+      margin-right: 20px;
+      padding: 10px 4rem;
+      height: 6vh !important;
+
+      .button-inner {
+        white-space: normal !important;
+        text-align: left;
+
+        span {
+          font-size: 3.2rem;
+          text-transform: capitalize;
+        }
+      }
+
+      &:last-child() {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .set-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+
+    button {
+      width: 50%;
+
+      .button-inner span {
+        font-size: 3.2rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .positions-container {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    margin-left: 25%;
+    
+    button {
+      float: left;
+      width: calc(48% - 0px);
+      margin-right: 0px;
+
+      &:nth-child(even) {
+        float: right;
+        margin-left: 0px;
+        margin-right: 0;
+      }
+    }
+  }
+}

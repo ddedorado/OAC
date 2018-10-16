@@ -1,0 +1,56 @@
+page-connect-robot {
+	ion-list {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.robot-container {
+    margin-top: 5rem;
+    
+		.robot-item {
+			color: color($colors, grey-lighter);
+			height: 35vh;
+
+			&:hover {
+				color: color($colors, grey); 
+			}
+
+			&.selected {
+				background-color: $white;
+				color: color($colors, grey);
+			}
+
+			.button-inner {
+				flex-flow: column nowrap;
+				position: relative;
+
+				.robot-item__name {
+					position: absolute;
+    			bottom: 0rem;
+    			font-size: 7rem;
+    			text-transform: none;
+
+    			ion-icon {
+    				font-size: 7rem;
+    				color: color($colors, secondary);
+    			}
+
+    			@media screen and (min-width: $break-xl) {
+	    			bottom: 10px;
+	    			font-size: 7rem;
+
+	    			ion-icon {
+	    				font-size: 7rem;
+	    			}
+    			}
+				}
+			}
+
+			ion-icon {
+				font-size: 20em;
+			}
+		}
+	}
+}

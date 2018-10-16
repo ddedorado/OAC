@@ -1,0 +1,17 @@
+<ion-header>
+  <custom-header [title]="this.title"></custom-header>
+</ion-header>
+<ion-content scroll="false">
+  <ion-grid margin no-padding class="app-container">
+    <ion-row margin padding >
+      <ion-col col-3>
+        <custom-bar [robots]="true"></custom-bar>
+      </ion-col>
+      <ion-col col-7 no-margin no-padding class="welcome-container">
+         <!-- <span>{{ 'WELCOME_INTRO' | translate }}</span>-->
+         <span class="title">Welcome Screen</span>
+         <span class="subtitle">Please connect to a Robot</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

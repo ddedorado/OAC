@@ -1,0 +1,283 @@
+page-home {
+
+	.home-container {
+		//height: 79%;
+		padding: 0 10rem;
+
+		ion-row,
+		.card-background-page {
+			height: 100%;
+		}
+	}
+
+	.button-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7rem;
+
+		button {
+			border-radius: $border-rd;
+			border-bottom: 1rem solid;
+			height: 9em;
+	    margin: 0 0 7rem;
+  		width: 9em;
+			margin-top: 0;
+			font-size: 3.2rem;
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+
+			.button-inner {
+				display: flex;
+		    flex-direction: column;
+		    align-items: center;
+			}
+
+			ion-icon {
+				font-size: 7rem;
+			}
+
+			&[color="green"],
+			&[ng-reflect-color="green"] {
+  	    background: -moz-linear-gradient(top, color($colors, green-lighter) 0%, color($colors, green) 48%, color($colors, green) 100%) !important;
+		    background: -webkit-gradient(left top, left bottom, color-stop(0%, color($colors, green-lighter)), color-stop(48%,  color($colors, green)), color-stop(100%,  color($colors, green))) !important;
+		    background: -webkit-linear-gradient(top, color($colors, green-lighter) 0%,  color($colors, green) 48%,  color($colors, green) 100%) !important;
+		    background: -o-linear-gradient(top, color($colors, green-lighter) 0%,  color($colors, green) 48%,  color($colors, green) 100%) !important;
+		    background: -ms-linear-gradient(top, color($colors, green-lighter) 0%,  color($colors, green) 48%,  color($colors, green) 100%) !important;
+		    background: linear-gradient(to bottom, color($colors, green-lighter) 0%,  color($colors, green) 48%,  color($colors, green) 100%) !important;
+		    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8fa00', endColorstr='#9ABC1E', GradientType=0 ) !important;
+				border-color: color($colors, green-secondary);
+			}
+
+			&[color="red"],
+			&[ng-reflect-color="red"] {
+  	    background: -moz-linear-gradient(top, color($colors, red-lighter) 0%, color($colors, red) 48%, color($colors, red) 100%) !important;
+		    background: -webkit-gradient(left top, left bottom, color-stop(0%, color($colors, red-lighter)), color-stop(48%,  color($colors, red)), color-stop(100%,  color($colors, red))) !important;
+		    background: -webkit-linear-gradient(top, color($colors, red-lighter) 0%,  color($colors, red) 48%,  color($colors, red) 100%) !important;
+		    background: -o-linear-gradient(top, color($colors, red-lighter) 0%,  color($colors, red) 48%,  color($colors, red) 100%) !important;
+		    background: -ms-linear-gradient(top, color($colors, red-lighter) 0%,  color($colors, red) 48%,  color($colors, red) 100%) !important;
+		    background: linear-gradient(to bottom, color($colors, red-lighter) 0%,  color($colors, red) 48%,  color($colors, red) 100%) !important;
+		    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4f5e', endColorstr='#BE1723', GradientType=0 ) !important;
+				border-color: color($colors, red-secondary);
+			}
+
+			&[color="yellow"],
+			&[ng-reflect-color="yellow"] {
+  	    background: -moz-linear-gradient(top, color($colors,   yellow-lighter) 0%, color($colors, yellow) 48%, color($colors, yellow) 100%) !important;
+		    background: -webkit-gradient(left top, left bottom, color-stop(0%, color($colors,   yellow-lighter)), color-stop(48%,  color($colors, yellow)), color-stop(100%,  color($colors, yellow))) !important;
+		    background: -webkit-linear-gradient(top, color($colors,   yellow-lighter) 0%,  color($colors, yellow) 48%,  color($colors, yellow) 100%) !important;
+		    background: -o-linear-gradient(top, color($colors,   yellow-lighter) 0%,  color($colors, yellow) 48%,  color($colors, yellow) 100%) !important;
+		    background: -ms-linear-gradient(top, color($colors,   yellow-lighter) 0%,  color($colors, yellow) 48%,  color($colors, yellow) 100%) !important;
+		    background: linear-gradient(to bottom, color($colors,   yellow-lighter) 0%,  color($colors, yellow) 48%,  color($colors, yellow) 100%) !important;
+		    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffd91', endColorstr='#DCDA16', GradientType=0 ) !important;
+				border-color: color($colors, yellow-secondary);
+			}
+
+			&[color="blue"],
+			&[ng-reflect-color="blue"] {
+  	    background: -moz-linear-gradient(top, color($colors, blue-lighter) 0%, color($colors, blue) 48%, color($colors, blue) 100%) !important;
+		    background: -webkit-gradient(left top, left bottom, color-stop(0%, color($colors, blue-lighter)), color-stop(48%,  color($colors, blue)), color-stop(100%,  color($colors, blue))) !important;
+		    background: -webkit-linear-gradient(top, color($colors, blue-lighter) 0%,  color($colors, blue) 48%,  color($colors, blue) 100%) !important;
+		    background: -o-linear-gradient(top, color($colors, blue-lighter) 0%,  color($colors, blue) 48%,  color($colors, blue) 100%) !important;
+		    background: -ms-linear-gradient(top, color($colors, blue-lighter) 0%,  color($colors, blue) 48%,  color($colors, blue) 100%) !important;
+		    background: linear-gradient(to bottom, color($colors, blue-lighter) 0%,  color($colors, blue) 48%,  color($colors, blue) 100%) !important;
+		    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4adbff', endColorstr='#0094BB', GradientType=0 ) !important;
+				border-color: color($colors, blue-secondary);
+			}
+
+			@media screen and (min-width: $break-xl) {
+				border-bottom: 1rem solid;
+				height: 10em;
+				width: 10em;
+				font-size: 3.2rem;
+
+				ion-icon {
+					font-size: 8rem;
+				}
+			}
+		}
+	}
+
+	.card-background-page {
+    margin-top: 7rem;
+
+	  ion-card {
+	  	border-radius: $border-rd;
+	  	margin: 0; 
+
+	  	.card-status {
+		    position: relative;
+		    text-align: center;
+		    color: $white;
+	      height: 100%;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: flex-end;
+
+  	    &.red {
+    	    background: -moz-linear-gradient(top, color($colors, red-lighter) 0%, color($colors, red) 48%, color($colors, red) 100%) !important;
+			    background: -webkit-gradient(left top, left bottom, color-stop(0%, color($colors, red-lighter)), color-stop(48%,  color($colors, red)), color-stop(100%,  color($colors, red))) !important;
+			    background: -webkit-linear-gradient(top, color($colors, red-lighter) 0%,  color($colors, red) 48%,  color($colors, red) 100%) !important;
+			    background: -o-linear-gradient(top, color($colors, red-lighter) 0%,  color($colors, red) 48%,  color($colors, red) 100%) !important;
+			    background: -ms-linear-gradient(top, color($colors, red-lighter) 0%,  color($colors, red) 48%,  color($colors, red) 100%) !important;
+			    background: linear-gradient(to bottom, color($colors, red-lighter) 0%,  color($colors, red) 48%,  color($colors, red) 100%) !important;
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4f5e', endColorstr='#BE1723', GradientType=0 ) !important;
+		    }
+
+		    &.green {
+    	    background: -moz-linear-gradient(top, color($colors, green-lighter) 0%, color($colors, green) 48%, color($colors, green) 100%) !important;
+			    background: -webkit-gradient(left top, left bottom, color-stop(0%, color($colors, green-lighter)), color-stop(48%,  color($colors, green)), color-stop(100%,  color($colors, green))) !important;
+			    background: -webkit-linear-gradient(top, color($colors, green-lighter) 0%,  color($colors, green) 48%,  color($colors, green) 100%) !important;
+			    background: -o-linear-gradient(top, color($colors, green-lighter) 0%,  color($colors, green) 48%,  color($colors, green) 100%) !important;
+			    background: -ms-linear-gradient(top, color($colors, green-lighter) 0%,  color($colors, green) 48%,  color($colors, green) 100%) !important;
+			    background: linear-gradient(to bottom, color($colors, green-lighter) 0%,  color($colors, green) 48%,  color($colors, green) 100%) !important;
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8fa00', endColorstr='#9ABC1E', GradientType=0 ) !important;
+		    }
+		    
+		    &.yellow {
+    	    background: -moz-linear-gradient(top, color($colors,   yellow-lighter) 0%, color($colors, yellow) 48%, color($colors, yellow) 100%) !important;
+			    background: -webkit-gradient(left top, left bottom, color-stop(0%, color($colors,   yellow-lighter)), color-stop(48%,  color($colors, yellow)), color-stop(100%,  color($colors, yellow))) !important;
+			    background: -webkit-linear-gradient(top, color($colors,   yellow-lighter) 0%,  color($colors, yellow) 48%,  color($colors, yellow) 100%) !important;
+			    background: -o-linear-gradient(top, color($colors,   yellow-lighter) 0%,  color($colors, yellow) 48%,  color($colors, yellow) 100%) !important;
+			    background: -ms-linear-gradient(top, color($colors,   yellow-lighter) 0%,  color($colors, yellow) 48%,  color($colors, yellow) 100%) !important;
+			    background: linear-gradient(to bottom, color($colors,   yellow-lighter) 0%,  color($colors, yellow) 48%,  color($colors, yellow) 100%) !important;
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffd91', endColorstr='#DCDA16', GradientType=0 ) !important;
+		    }
+
+		    &.blue {
+    	    background: -moz-linear-gradient(top, color($colors, blue-lighter) 0%, color($colors, blue) 48%, color($colors, blue) 100%) !important;
+			    background: -webkit-gradient(left top, left bottom, color-stop(0%, color($colors, blue-lighter)), color-stop(48%,  color($colors, blue)), color-stop(100%,  color($colors, blue))) !important;
+			    background: -webkit-linear-gradient(top, color($colors, blue-lighter) 0%,  color($colors, blue) 48%,  color($colors, blue) 100%) !important;
+			    background: -o-linear-gradient(top, color($colors, blue-lighter) 0%,  color($colors, blue) 48%,  color($colors, blue) 100%) !important;
+			    background: -ms-linear-gradient(top, color($colors, blue-lighter) 0%,  color($colors, blue) 48%,  color($colors, blue) 100%) !important;
+			    background: linear-gradient(to bottom, color($colors, blue-lighter) 0%,  color($colors, blue) 48%,  color($colors, blue) 100%) !important;
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4adbff', endColorstr='#0094BB', GradientType=0 ) !important;
+		    }
+
+      	ion-icon {
+	    		font-size: 25em;
+	    		margin: 20rem 0;
+
+	    		@media screen and (min-width: $break-xl) {
+						font-size: 30em;
+		    		margin: 20rem 0;
+	    		}
+	    	}
+	  	}
+
+			.card-data {
+				background-color: $toolbar-background;
+				height: 20rem;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    text-align: center;
+
+		  	.card-title {
+			    font-size: 5em;
+			    width: 100%;
+			    color: $white;
+			    text-transform: uppercase;
+		  	}
+
+		  	.card-subtitle {
+			    font-size: 3.4em;
+			    width: 100%;
+			    color: $white;
+			    text-transform: uppercase;
+		  	}
+
+				@media screen and (min-width: $break-xl) {
+					height: 25rem;
+
+			  	.card-title {
+				    font-size: 6.5em;
+				    font-style: italic;
+			  	}
+
+			  	.card-subtitle {
+				    font-size: 4.5em;
+				    font-style: italic;
+			  	}
+				}
+			}
+	  }
+	}
+
+	.status-bar {
+
+		.toolbar-background-md { 
+			background-color: color($colors, white);
+		}; 
+
+		&__header {
+	    background: -moz-linear-gradient(top, color($colors, grey-lighter) 0%, color($colors, grey) 48%, color($colors, grey) 100%) !important;
+	    background: -webkit-gradient(left top, left bottom, color-stop(0%, color($colors, grey-lighter)), color-stop(48%,  color($colors, grey)), color-stop(100%,  color($colors, yellow))) !important;
+	    background: -webkit-linear-gradient(top, color($colors, grey-lighter) 0%, color($colors, grey) 48%, color($colors, grey) 100%) !important;
+	    background: -o-linear-gradient(top, color($colors, grey-lighter) 0%, color($colors, yellow) 48%, color($colors, grey) 100%) !important;
+	    background: -ms-linear-gradient(top, color($colors, grey-lighter) 0%, color($colors, grey) 48%, color($colors, grey) 100%) !important;
+	    background: linear-gradient(to bottom, color($colors, grey-lighter) 0%, color($colors, grey) 48%, color($colors, grey) 100%) !important;
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B3B3B3', endColorstr='#666', GradientType=0 ) !important;
+			padding: 4rem;
+
+			span { 
+				color: color($colors, light); 
+				font-size: 4rem;
+				font-weight: normal;
+
+				@media screen and (min-width: $break-xl) {
+					font-size: 4.8rem;
+				}
+			} 
+		}
+		
+		&__info {
+			display: flex;
+			flex-flow: column nowrap;
+			text-align: left;
+			font-size: 3.4rem;
+
+			@media screen and (min-width: $break-xl) {
+				font-size: 3.8rem;
+			}
+
+			&__number {
+				font-size: 5.4rem;
+				font-weight: bold;
+
+				@media screen and (min-width: $break-xl) {
+					font-size: 6rem;
+				}
+			} 
+		}
+
+		ion-col {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			border-right: 1px solid color($colors, grey-lighter);
+			border-bottom: 1px solid color($colors, grey-lighter);
+			padding: 3rem 0 !important;
+
+			&:last-child {
+				border-right: 0;
+			}
+
+			ion-icon {
+				//margin-left: 32px;
+			}
+		}
+
+		ion-icon {
+			font-size: 5em;
+			padding-left: 3vw;
+			
+			@media screen and (min-width: $break-xl) {
+				font-size: 6em;
+				padding-left: 4vw;
+			}
+		}
+	}
+}

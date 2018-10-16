@@ -1,0 +1,113 @@
+custom-bar {
+
+  .custom-bar {
+    display: flex;
+    height: 83vh;
+    margin: 0rem 10rem;
+    flex-direction: column;
+    align-content: center;
+
+    &.home {
+      margin-top: 5rem;
+      height: 100%;
+    }
+
+    &__title {
+      font-size: 5rem;
+      white-space: nowrap;
+      text-transform: uppercase;
+      color: color($colors, black);
+      margin-bottom: 3rem;
+
+      &[hidden] + .custom-bar__subtitle {
+        margin-top: -15px;
+        color: color($colors, black);
+      }
+    }
+
+    &__subtitle {
+      font-size: 10em;
+      margin-right: 0;
+      color: color($colors, grey-lighter);
+
+      @media screen and (min-width: $break-xl) {
+        font-size: 12rem;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-end;
+      align-content: flex-end;
+      justify-items: center;
+      height: 75%;
+
+      &.home {
+        height: 50%;
+      }
+      .custom-bar__comments { margin-bottom: 50px; }
+
+      .custom-bar__comments,
+      .custom-bar__mgoptions,
+      .custom-bar__options {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      @media screen and (min-width: $break-xl) {
+        height: 75%;
+      }
+    }
+
+    &__robots {
+      display: flex;
+      flex-direction: column;
+
+      ion-icon {
+        font-size: 23rem;
+        margin-bottom: 7rem;
+        text-align: center;
+
+        &:last-child {
+          margin-bottom: 0rem;
+        }
+      }
+    }
+
+    &__comments {
+      background-color: color($colors, grey-lighter);
+      border-radius: 60px;
+      font-size: 3.8rem;
+      color: color($colors, white);
+      position: relative;
+      padding: 40px;
+
+      &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 100px solid transparent;
+        border-top: 100px solid transparent;
+        border-bottom: 100px solid color($colors, grey-lighter);
+        position: absolute;
+        right: 0;
+        top: -150px;
+      }
+    }
+
+    &__options,
+    &__mgoptions {
+
+      button {
+        color: color($colors, black);
+        height: 5em;
+      }
+
+      .button-inner {
+        flex-direction: column;
+      }
+    }
+  }
+}

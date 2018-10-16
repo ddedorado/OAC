@@ -1,0 +1,58 @@
+<ion-header>
+  <custom-header [title]="this.title"></custom-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid class="mg-main-container">
+    <ion-row>
+      <ion-col col-3>
+        <custom-bar [title]="this.title" [options]="true" [mgoptions]="true" [comments]="true" page="manual-guiding"></custom-bar>
+      </ion-col>
+      <ion-col col-9>
+
+        <ion-segment [(ngModel)]="this.arms" color="dark" (ionChange)="segmentChanged($event)">
+          <ion-segment-button value="separated" text-left>
+            <ion-icon name="abb-left" margin-left></ion-icon>
+            <ion-icon name="abb-right" margin-left></ion-icon>
+            <span margin-left>Left/Right separately</span>
+          </ion-segment-button>
+          <ion-segment-button value="both" text-right >      
+            <span margin-right>Move both arms</span>
+            <ion-icon name="abb-left" margin-right></ion-icon>
+            <ion-icon name="abb-right" margin-right></ion-icon>
+          </ion-segment-button>
+        </ion-segment>
+
+        <div [ngSwitch]="this.arms">
+      
+          <ion-item *ngSwitchCase="'separated'">
+            <ion-row class="mg-container">
+              <ion-col col-5>
+                <manual-guiding-actions type="right"></manual-guiding-actions>
+              </ion-col> 
+              <ion-col col-2 class="mg-column">
+                <div class="separator"></div>
+                <div class="both-btn">
+                  <div class="both-text">Play both arms</div>
+                  <button class="mg-green" ion-button color="green" icon-only [disabled]="! this.enablePlay.left || ! this.enablePlay.right || this.enableExecution" (click)="playBoth()">
+                    <ion-icon name="play" margin-bottom></ion-icon>
+                  </button>
+                </div>
+              </ion-col>
+              <ion-col col-5>
+                <manual-guiding-actions type="left"></manual-guiding-actions>
+              </ion-col>
+            </ion-row>
+          </ion-item >
+
+          <ion-item *ngSwitchCase="'both'">
+            <div class="mg-container" offset-3 col-5>
+              <manual-guiding-actions type="both"></manual-guiding-actions>
+            </div>
+          </ion-item >
+          
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

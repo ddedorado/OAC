@@ -1,0 +1,85 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+ 	<custom-header [title]="this.title"></custom-header>
+</ion-header>
+<ion-content>
+ 	<ion-toolbar no-border no-padding class="status-bar">
+	 	<div text-center class="status-bar__header">
+	 		<span no-margin no-padding>Operational Status</span>
+	 	</div>
+		<ion-grid no-padding>
+			<ion-row>
+				<ion-col col-3>
+					<!-- Hours the robot has been in operations -->
+					<ion-icon name="abb-clock"></ion-icon>
+					<div padding class="status-bar__info" [hidden]="! robotConnected">
+						<span>Time since start</span>
+						<span class="status-bar__info__number">{{status.time.hours}}:{{status.time.minutes}}:{{status.time.seconds}}</span>
+						<span [hidden]="status.active < 0">Hour Min Sec</span>
+					</div>
+				</ion-col>
+				<ion-col col-3>
+					<!-- Pauses -->
+					<ion-icon name="abb-pause"></ion-icon>
+					<div padding class="status-bar__info" [hidden]="! robotConnected">
+						<span>Number of pauses</span>
+						<span class="status-bar__info__number">{{ status.pauses }}</span>
+					</div>
+				</ion-col>
+				<ion-col col-3>
+					<!-- Cycles completed -->
+					<ion-icon name="abb-cycles"></ion-icon>
+					<div padding class="status-bar__info" [hidden]="! robotConnected">
+						<span>Number of cycles</span>
+						<span class="status-bar__info__number">0</span>
+					</div>
+				</ion-col>
+				<ion-col col-3>
+					<!-- Other messages -->
+					<ion-icon name="abb-comments"></ion-icon>
+					<div margin class="status-bar__info" [hidden]="! robotConnected">
+						<span>{{ status.process.message }}</span>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-toolbar>
+	<ion-grid no-margin no-padding class="home-container">
+		<ion-row no-margin no-padding >
+			<ion-col col-3>
+				<custom-bar [robots]="true" [home]="true"></custom-bar>
+			</ion-col>
+			<ion-col col-7 no-margin no-padding class="card-background-page">
+		  		<ion-card>
+		  			<div class="card-status" [ngClass]="status.process.color">
+		  				<ion-icon padding-vertical [name]="status.process.icon"></ion-icon>
+		  			</div>
+				    <div padding-vertical class="card-data">
+					    <div class="card-title">{{status.process.name}}</div>
+					    <div margin-top class="card-subtitle">{{status.process.program}}</div>
+				    </div>
+			  	</ion-card>
+			</ion-col>
+			<ion-col col-2 class="button-bar">
+				<button ion-button [color]="status.start.color" full large (click)="call(status.start.func)" [disabled]="! robotConnected || enableExecution">
+					<ion-icon [name]="status.start.icon" margin-bottom></ion-icon>
+					<span>{{ status.start.text }}</span>
+				</button>
+				<button ion-button color="red" full large [disabled]="status.process.active < 0 || ! robotConnected || enableExecution" (click)="stop()">
+					<ion-icon name="square" margin-bottom></ion-icon>
+					<span>Stop</span>
+				</button>
+				<button ion-button color="blue" full large [disabled]="! robotConnected || enableExecution" (click)="goToHome()">
+					<ion-icon name="abb-back" margin-bottom></ion-icon>
+					<span>Back to home</span>
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

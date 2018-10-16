@@ -1,0 +1,45 @@
+<div class="custom-bar" [ngClass]="{'home': this._isHome}">
+  <h2 margin-top class="custom-bar__title" [hidden]="! this._title ">{{ this._title }}</h2>
+  
+  <div class="custom-bar__subtitle">
+    <span>Operate Any Cobot</span>
+  </div>
+
+  <div class="custom-bar__content" [ngClass]="{'home': this._isHome}">
+    <div class="custom-bar__robots" [hidden]="! this._robots">
+      <ion-icon name="abb-duarov2" color="grey-lighter"></ion-icon>
+      <ion-icon name="abb-yumi" color="grey-lighter"></ion-icon>
+    </div>
+
+    <div margin-top class="custom-bar__comments" [hidden]="! this._comments">
+      <span>Move both robots arms to new position and Click Add new position</span>
+    </div>
+
+    <div class="custom-bar__mgoptions" [hidden]="! this._mgoptions">
+      <button col-5 ion-button clear icon-only (click)="createProgram()">
+        <span margin-vertical text-wrap >Create Program</span>
+        <ion-icon name="abb-plus" color="black" padding-bottom></ion-icon>
+      </button>
+      <button col-5 ion-button clear icon-only>
+        <span margin-vertical text-wrap>Load Program</span>
+        <ion-icon name="abb-load-gm" color="black" padding-bottom></ion-icon>
+      </button>
+    </div>
+
+    <div class="custom-bar__options" [hidden]="! this._options">
+      <button ion-button clear icon-only (click)="saveProgram()" [disabled]="this._page == 'load' || !this._page || !this._enableSave">
+        <span margin-bottom>Save</span>
+        <ion-icon name="abb-save" color="black" padding-bottom></ion-icon>
+      </button>
+      <button ion-button clear icon-only (click)="log()">
+        <span margin-bottom>Save As</span>
+        <ion-icon name="abb-saveas" color="black" padding-bottom></ion-icon>
+      </button>
+      <button ion-button clear icon-only [disabled]="!this._enableDelete" (click)="this.openDeleteAlert()">
+        <span margin-bottom>Delete</span>
+        <ion-icon name="abb-undo" [color]="this._colorDelete" padding-bottom></ion-icon>
+      </button>
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,23 @@
+
+<ion-header>
+	<custom-header [title]="this.title"></custom-header>
+</ion-header>
+
+<ion-content padding>
+	<ion-grid class="program-container">
+		<ion-row>
+      <ion-col col-3>
+        <custom-bar [title]="this.title" [options]="true" page="load"></custom-bar>
+      </ion-col>
+      <ion-col col-9>
+        <ion-row>
+    			<ion-col *ngFor="let program of this.programs; let ind = index" col-4 padding-horizontal margin-bottom>
+    				<button ion-button text-center full large color="blue" class="program-item" (click)="selectProgram(ind)" [ngClass]="{'selected':(ind == this.selectedProgram)}">
+    					{{ program.name }}
+    				</button>
+    			</ion-col>
+		    </ion-row>
+      </ion-col>
+    </ion-row>
+	</ion-grid>
+</ion-content>

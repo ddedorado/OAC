@@ -1,0 +1,26 @@
+<ion-header>
+	<custom-header [title]="this.title"></custom-header>
+</ion-header>
+
+<ion-content padding>
+	<ion-grid class="robot-container">
+		<ion-row>
+			<ion-col col-3>
+				<custom-bar [title]="title" [robots]="false"></custom-bar>
+			</ion-col>
+			<ion-col col-9>
+				<ion-row>
+					<ion-col *ngFor="let robot of this.robots; let ind = index" col-4>
+						<button ion-button color="white" clear text-center padding-vertical full large class="robot-item" (click)="selectRobot(ind, robot.available)" [ngClass]="{'selected':(ind == this.robotSelected)}">
+							<ion-icon margin-bottom [name]="robot.icon"></ion-icon>
+							<div class="robot-item__name">
+								{{ robot.name }}
+								<ion-icon name="checkmark" [hidden]="(ind != this.robotSelected)"></ion-icon>
+							</div>
+						</button>
+					</ion-col>
+				</ion-row>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <custom-header [title]="this.title"></custom-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid class="program-container">
+    <ion-row>
+      <ion-col col-3>
+        <custom-bar [title]="this.title" [options]="true"></custom-bar>
+      </ion-col>
+      <ion-col col-9>
+
+        <ion-list>
+
+          <ion-item no-padding>
+            <ion-label floating>Program Name</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+        </ion-list>
+        <div float-end>
+          <button ion-button color="blue">Save as</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

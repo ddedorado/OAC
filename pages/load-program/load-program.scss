@@ -1,0 +1,19 @@
+page-load-program {
+	.program-container {
+		margin-top: 5rem;
+		
+		.program-item {
+      border-radius: $border-rd;
+      font-size: 3.8rem;
+      
+			&.selected {
+				background-color: color($colors, yellow);
+				color: color($colors, black);
+			}
+		}
+	}
+}
+
+.action-sheet-group {
+	overflow: auto;
+}

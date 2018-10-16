@@ -1,0 +1,12 @@
+<ion-navbar hideBackButton >
+	<ion-title >
+    <button ion-button padding-right clear color="light" [id]="this._home.id" [ngClass]="{'selected':( this._home.title == this._title )}" [disabled]="this._robotConnected == -1" (click)="navPage(this._home.value)">
+      <ion-icon padding-right name="abb-home"></ion-icon>{{ this._home.title }}
+    </button>
+  </ion-title>
+	<ion-buttons end>
+		<button ion-button padding-right clear color="light" *ngFor="let page of this._pages" [id]="page.id" (click)="call(page.function, page.value)" [ngClass]="{'selected':(page.title == this._title)}" [disabled]="this._robotConnected == -1 && page.id != 'connect-to-robot'">
+			<ion-icon [name]="page.icon" padding-right></ion-icon>{{page.title}}
+		</button>
+	</ion-buttons>
+</ion-navbar>

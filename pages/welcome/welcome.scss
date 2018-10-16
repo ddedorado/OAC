@@ -1,0 +1,39 @@
+page-welcome {
+  .app-container {
+    height: 89vh;
+
+    ion-row {
+      height: 100vh;
+    }
+  }
+  .welcome-container {
+    font-size: 5rem;
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    flex-direction: column;
+
+    span {
+      font-size: 9rem;
+
+      &.text {
+        font-size: 14rem;
+        margin-bottom: 9rem;
+      }
+
+      &.title {
+        font-size: 15rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 9rem;
+      }
+
+      &.subtitle {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
